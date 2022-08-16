@@ -9,7 +9,7 @@ $(function(){
 
 
     var myFull = new fullpage("#fullpage",{
-        sectionsColor: ["black", "skyblue", "white", "black", "black", "black"], //각 섹션 컬러
+        sectionsColor: ["black", "black", "white", "black", "black", "black"], //각 섹션 컬러
         navigation: true, //도트 유무
         navigationTooltips: ["New Game", "Recommend", "News", "Upgrade", "Event", "Goods"],
         showActiveTooltip: true,
