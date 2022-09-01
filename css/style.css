@@ -990,6 +990,7 @@ header #nav>li>a {
     max-width: 400px;
     width: 100%;
     z-index: 0;
+    opacity: 0.5;
 }
 
 .goodsWrap .goodsLogo>img {
@@ -1386,6 +1387,9 @@ header #nav>li>a {
 
 }
 @media screen and (max-width: 640px){
+    #fp-nav ul li .fp-tooltip.fp-right{
+        display: none;
+    }
     header>h1{
         max-width: 100px;
     }
@@ -1461,9 +1465,29 @@ header #nav>li>a {
     .linkWrap>ul>li>ul a{
         font-size: 10px;
     }
+    .recommendWrap .pack{
+        max-width: 215px;
+        height: 300px;
+    }
+    .recommendWrap .pack>ul>li>p{
+        font-size: 10px;
+    }
+    .recommendWrap .pack>ul>li .packBtn{
+        max-width: 120px;
+        line-height: 25px;
+    }
+    .eventWrap .eventList{
+        padding: 0 50px;
+    }
+    .eventWrap .eventList>.active{
+        height: 215px;
+    }
+    .eventWrap .eventList>li>.eventmoreBtn{
+        bottom:2%;
+    }
     .goodsWrap .goodsText{
         max-width: 340px;
-        top: 30%;
+        top: 25%;
     }
     .goodsWrap .goodsText>p{
         font-size: 16px;
@@ -1477,6 +1501,6 @@ header #nav>li>a {
 }
 @media screen and (max-width: 376px){
     .eventWrap .eventList>.active{
-        height: 240px;
+        /* height: 240px; */
     }
 }
