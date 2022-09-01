@@ -16,10 +16,19 @@ $(function(){
     })
 
     $("#fp-nav>ul>li:eq(3)>a").on("click", function(){
-        console.log("클릭")
+        // console.log("클릭")
         upPageInit();
     })
+    $(".ham").on("click", function(){
+        if($("#nav").hasClass("active")){
+            $("#nav").removeClass("active");
+            $(this).children().removeClass("active");
+        }else{
+            $("#nav").addClass("active");
+            $(this).children().addClass("active");
+        }
 
+    })
     // main01 *********************
     var mainIndex = 0;
 
@@ -61,7 +70,7 @@ $(function(){
             $(this).addClass("active").siblings().removeClass("active");
 
             // $(".recBg>li").eq(recIndex).addClass("active").siblings().removeClass("active");
-            $(".recBg").css({
+            $(".recommendWrap").css({
                 background: "url(./images/rec_bg_0"+(recIndex+1)+".jpg)",
                 backgroundPosition: "center",
                 backgroundRepeat: "no-repeat",
@@ -83,11 +92,22 @@ $(function(){
     })
 
     // main03 **************************************
-    $(".news>div").on({
+    $(".mainNews").on({
         "mouseover": function(){
             // console.log("오버")
             newsIndex = $(this).index();
-            $(this).addClass("active").siblings().removeClass("active");
+            $(this).addClass("active")
+        },
+
+        "mouseout": function(){
+            $(this).removeClass("active")
+        }
+    })
+    $(".subNews").on({
+        "mouseover": function(){
+            // console.log("오버")
+            newsIndex = $(this).index();
+            $(this).addClass("active")
         },
 
         "mouseout": function(){
