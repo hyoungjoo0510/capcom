@@ -6,6 +6,11 @@ $(function(){
             upPageInit();
         }
     })
+    $(window).on("touchmove", function(){
+        if($("#fullpage>div:eq(3)").hasClass("active")===true){
+            upPageInit();
+        }
+    })
 
 
     var myFull = new fullpage("#fullpage",{
@@ -19,6 +24,7 @@ $(function(){
         // console.log("클릭")
         upPageInit();
     })
+
     $(".ham").on("click", function(){
         if($("#nav").hasClass("active")){
             $("#nav").removeClass("active");
